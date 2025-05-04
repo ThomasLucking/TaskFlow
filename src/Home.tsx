@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, TextInput, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View, useColorScheme } from 'react-native';
 // And to download this Dependency.
-// import { CheckBox, Icon } from 'react-native-elements';
+import { CheckBox, Icon } from 'react-native-elements';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 type Task = {
