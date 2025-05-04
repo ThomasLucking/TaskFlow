@@ -5,10 +5,12 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import HomeScreen from './Home';
 import Login from './Login';
+import Register from './Register';
 
 export type RootStackParamList = {
   Home: undefined;
   Login: undefined;
+  Register: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -19,6 +21,7 @@ const Navigation = () => {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
       </Stack.Navigator>
     </NavigationContainer>
   );
