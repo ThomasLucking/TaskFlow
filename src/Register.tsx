@@ -53,6 +53,7 @@ const Register = ({ navigation }: any) => {
         autoCapitalize="none"
         value={email}
       />
+      
       <TextInput
         style={styles.input}
         placeholder="Password"
