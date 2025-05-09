@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Modal, TextInput, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View, useColorScheme } from 'react-native';
-// And to download this Dependency.
 import { CheckBox, Icon } from 'react-native-elements';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
@@ -16,7 +15,7 @@ function Home(): React.JSX.Element {
     const [newTaskText, setNewTaskText] = useState('');
 
     const backgroundStyle = {
-        backgroundColor: '#242323',
+        backgroundColor: '#060532',
         flex: 1,
     };
 
@@ -52,7 +51,7 @@ function Home(): React.JSX.Element {
                                 placeholder="Enter new task"
                                 placeholderTextColor="#0582e7"
                                 autoFocus={true}
-                            /> 
+                            />
                             <Pressable
                                 style={styles.addButton}
                                 onPress={addTask}
@@ -75,8 +74,8 @@ function Home(): React.JSX.Element {
                 >
                     <Text style={styles.textstyle}>Add Task</Text>
                 </Pressable>
-                
-                
+
+
                 <View style={styles.container}>
                     {boxes.map((box) => (
                         <View key={box.id} style={styles.rec}>
