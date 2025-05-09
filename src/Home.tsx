@@ -52,7 +52,7 @@ function Home(): React.JSX.Element {
                                 placeholder="Enter new task"
                                 placeholderTextColor="#0582e7"
                                 autoFocus={true}
-                            />
+                            /> 
                             <Pressable
                                 style={styles.addButton}
                                 onPress={addTask}
@@ -75,7 +75,7 @@ function Home(): React.JSX.Element {
                 >
                     <Text style={styles.textstyle}>Add Task</Text>
                 </Pressable>
-                {/* THIS IS THE FIXED LINE - wrapped navigation.navigate in a function */}
+                
                 
                 <View style={styles.container}>
                     {boxes.map((box) => (

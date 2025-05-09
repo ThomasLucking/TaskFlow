@@ -3,6 +3,8 @@ import { Image, View, Text, TextInput, StyleSheet, Pressable } from 'react-nativ
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
+
+
 const Login = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
@@ -14,7 +16,7 @@ const Login = ({ navigation }: any) => {
               Welcome Back
             </Text>
           }
-        >
+        > 
           <LinearGradient colors={['#5b1ec5', '#5145e2', '#2d59d6']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}>
             <Text style={[styles.title, { opacity: 0 }]}>
               Welcome Back
@@ -41,11 +43,11 @@ const Login = ({ navigation }: any) => {
           />
         </View>
 
-        <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
+        {/* <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}> */}
           <Pressable style={styles.login} onPress={() => navigation.navigate('Home')}>
             <Text style={styles.logintext}>Sign In</Text>
           </Pressable>
-        </LinearGradient>
+        {/* </LinearGradient> */}
       </View>
     </View>
   );
