@@ -3,6 +3,7 @@ import { Image, View, Text, TextInput, StyleSheet, Pressable } from 'react-nativ
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
+import Navigation from './App';
 
 
 const Login = ({ navigation }: any) => {
@@ -46,6 +47,10 @@ const Login = ({ navigation }: any) => {
         {/* <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}> */}
           <Pressable style={styles.login} onPress={() => navigation.navigate('Home')}>
             <Text style={styles.logintext}>Sign In</Text>
+          </Pressable>
+          <Text style={styles.registertext}>Don't have an account? Click here to</Text>
+          <Pressable onPress={() => navigation.navigate('Register')}>
+            <Text style={styles.registerbutton}>Register</Text>
           </Pressable>
         {/* </LinearGradient> */}
       </View>
@@ -117,6 +122,20 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: "100%"
   },
+  registertext: {
+    color: "white",
+    top: 10,
+    right: 30,
+    fontWeight: "bold",
+  },
+  registerbutton: {
+    color: "#13a8ed",
+    left: 129,
+    bottom: 6.4,
+    fontWeight: "bold",
+    
+
+  }
 });
 
 export default Login;

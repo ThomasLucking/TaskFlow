@@ -38,13 +38,7 @@ const Register = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Register</Text>
-      <TextInput
-        style={styles.input}
-        placeholder='Username'
-        autoCapitalize='none'
-        onChangeText={handleName} // Fixed: use onChangeText
-        value={name}
-      />
+      
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -73,11 +67,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+    backgroundColor: "#060532",
   },
   title: {
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: 'white',
   },
   input: {
     width: '100%',
