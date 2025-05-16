@@ -3,7 +3,6 @@ import { Image, View, Text, TextInput, StyleSheet, Pressable } from 'react-nativ
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
-import Navigation from './App';
 
 
 const Login = ({ navigation }: any) => {
