@@ -132,8 +132,7 @@ const styles = StyleSheet.create({
     left: 129,
     bottom: 6.4,
     fontWeight: "bold",
-    
-
+  
   }
 });
 

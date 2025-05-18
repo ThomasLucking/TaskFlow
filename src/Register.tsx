@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import {Pressable, Image, View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { Pressable, Image, View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
-
+import FontAwesome from "react-native-vector-icons/Entypo";
+import FontAwesome2 from "react-native-vector-icons/FontAwesome";
 
 const Register = ({ navigation }: any) => {
   const [name, setName] = useState('');
@@ -57,6 +58,7 @@ const Register = ({ navigation }: any) => {
         </MaskedView>
         <Text style={styles.subtitle}>Join us to get started!</Text>
         <View style={styles.inputcontainer}>
+          <FontAwesome name="email" size={25} color="#aaaaaa" />
           <TextInput
             style={styles.input}
             placeholder="Email"
@@ -68,6 +70,7 @@ const Register = ({ navigation }: any) => {
           />
         </View>
         <View style={styles.inputcontainer}>
+          <FontAwesome2 name="lock" size={25} color="#aaaaaa" />
           <TextInput
             style={styles.input}
             placeholder="Password"
@@ -79,6 +82,10 @@ const Register = ({ navigation }: any) => {
         </View>
         <Pressable style={styles.registerbutton} onPress={() => navigation.navigate('Register')}>
           <Text style={styles.registertext}>Register</Text>
+        </Pressable>
+        <Text style={styles.registertext2}>Already have an account? Click here to</Text>
+        <Pressable onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.registerbutton2}>Login</Text>
         </Pressable>
       </View>
     </View >
@@ -146,11 +153,25 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
 
   },
+  registertext2: {
+    alignContent: "center",
+    color: "white",
+    fontWeight: "bold",
+    right: 25
+
+  },
   subtitle: {
     color: "lightgray",
     fontWeight: "bold",
     fontSize: 15,
     bottom: 13,
+
+  }, 
+  registerbutton2:{
+    color: "#13a8ed",
+    fontWeight: "bold",
+    left: 130,
+    bottom: 17,
 
   }
 });
