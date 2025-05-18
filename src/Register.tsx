@@ -45,16 +45,17 @@ const Register = ({ navigation }: any) => {
         <MaskedView
           maskElement={
             <Text style={styles.title}>
-              Welcome Back
+              Create Account
             </Text>
           }
         >
-          <LinearGradient colors={['#5b1ec5', '#5145e2', '#2d59d6']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}>
+          <LinearGradient colors={['#5b1ec5', '#2d59d6']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}>
             <Text style={[styles.title, { opacity: 0 }]}>
-              Welcome Back
+              Create Account
             </Text>
           </LinearGradient>
         </MaskedView>
+        <Text style={styles.subtitle}>Join us to get started!</Text>
         <View style={styles.inputcontainer}>
           <TextInput
             style={styles.input}
@@ -76,8 +77,8 @@ const Register = ({ navigation }: any) => {
             value={password}
           />
         </View>
-        <Pressable onPress={() => navigation.navigate('Register')}>
-          <Text style={styles.registerbutton}>Register</Text>
+        <Pressable style={styles.registerbutton} onPress={() => navigation.navigate('Register')}>
+          <Text style={styles.registertext}>Register</Text>
         </Pressable>
       </View>
     </View >
@@ -130,10 +131,26 @@ const styles = StyleSheet.create({
   },
 
   registerbutton: {
-    color: "#13a8ed",
-    left: 129,
-    bottom: 6.4,
+    alignItems: "center",
+    width: '100%',
+    backgroundColor: "#5b34db",
+    padding: 9,
+    borderRadius: 12,
+    marginTop: 40
+
+  },
+  registertext: {
+    alignContent: "center",
+    fontSize: 25,
+    color: "white",
     fontWeight: "bold",
+
+  },
+  subtitle: {
+    color: "lightgray",
+    fontWeight: "bold",
+    fontSize: 15,
+    bottom: 13,
 
   }
 });
