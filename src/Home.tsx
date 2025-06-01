@@ -91,7 +91,6 @@ function Home(): React.JSX.Element {
                                 />
 
                             </View>
-
                             <Text style={[styles.boxText, box.checked && styles.completedText]}>{box.text}</Text>
                             <View style={styles.delete}>
                                 <Pressable onPress={() => setBoxes(boxes.filter(item => item.id !== box.id))}>
